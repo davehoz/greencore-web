@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenCore Nutrition — Innovación proteica para marcas exigentes</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logos/GreenCore_isotipo.png" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/logos/GreenCore_logotipo.png" alt="GreenCore Nutrition" />
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="pages/quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="pages/productos.html">Nuestros productos</a></li>
+        <li><a href="pages/sostenibilidad.html">Sostenibilidad</a></li>
+        <li><a href="pages/blog.html">Educación</a></li>
+        <li><a href="pages/visitanos.html">Visítanos</a></li>
+        <li><a href="pages/contacto.html" class="navbar__cta">Solicita una muestra</a></li>
+      </ul>
+      <div class="navbar__hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <span class="hero__label">Producido en Teruel, Aragón · España</span>
+        <h1>La proteína que su fórmula necesita. Con la trazabilidad que su cliente exige.</h1>
+        <p>ProtiNova es harina proteica de <em>Tenebrio molitor</em> con 65–72% de proteína bruta, trazabilidad completa por lote y un modelo circular verificable. Para petfood premium y acuicultura de valor.</p>
+        <div class="hero__actions">
+          <a href="pages/contacto.html" class="btn btn--beige">Solicita una muestra técnica gratuita</a>
+          <a href="pages/productos.html" class="btn btn--outline">Ver ficha técnica</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="https://images.unsplash.com/photo-1581093458791-9f58c68f6c31?w=800&q=80" alt="Instalaciones GreenCore Nutrition en Teruel" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ STATS ══ -->
+  <section class="section--dark">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__number">65–72%</div>
+        <div class="stat__label">Proteína bruta por lote</div>
+      </div>
+      <div class="stat">
+        <div class="stat__number">&gt;90%</div>
+        <div class="stat__label">Digestibilidad validada</div>
+      </div>
+      <div class="stat">
+        <div class="stat__number">16,9%</div>
+        <div class="stat__label">CAGR del mercado 2024–2030</div>
+      </div>
+      <div class="stat">
+        <div class="stat__number">70–80%</div>
+        <div class="stat__label">Autoconsumo energético (H5)</div>
+      </div>
+      <div class="stat">
+        <div class="stat__number">12–15</div>
+        <div class="stat__label">Empleos directos en entorno rural</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TRES PILARES ══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Nuestra propuesta de valor</span>
+        <h2>Tres pilares que los operadores masivos no pueden replicar</h2>
+        <p>GreenCore no compite en precio. Compite en calidad técnica, trazabilidad y sostenibilidad verificable.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar__icon">🔍</div>
+          <h3>Trazabilidad total por lote</h3>
+          <p>Cada saco lleva un código QR con el recorrido completo del producto: desde el huevo de <em>Tenebrio molitor</em> hasta su entrega. Una herramienta de negocio real para facilitar homologaciones y superar auditorías de proveedores.</p>
+          <a href="pages/productos.html" class="btn btn--primary mt-24" style="font-size:0.85rem;padding:8px 18px;">Ver sello Tenebrio Trazado →</a>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">♻️</div>
+          <h3>Modelo circular verificable</h3>
+          <p>El frass (excremento de las larvas) se convierte en fertilizante orgánico certificado. El biogás generado alimenta la propia planta. Esto produce datos reales de huella de carbono listos para su informe CSRD y cómputo de Scope 3.</p>
+          <a href="pages/sostenibilidad.html" class="btn btn--primary mt-24" style="font-size:0.85rem;padding:8px 18px;">Ver modelo circular →</a>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">🔬</div>
+          <h3>Co-desarrollo técnico</h3>
+          <p>No enviamos una muestra y esperamos su decisión. Trabajamos con su equipo de formulación en el Application Lab de Teruel hasta que el resultado sea exactamente el que su fórmula necesita. Con un KAM asignado con autonomía real.</p>
+          <a href="pages/visitanos.html" class="btn btn--primary mt-24" style="font-size:0.85rem;padding:8px 18px;">Visitar el Application Lab →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRODUCTO DESTACADO ══ -->
+  <section class="section section--beige">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+        <div>
+          <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93458?w=800&q=80"
+               alt="ProtiNova — Harina de Tenebrio molitor"
+               style="border-radius:12px;width:100%;height:400px;object-fit:cover;box-shadow:0 8px 32px rgba(46,94,78,0.15);" />
+        </div>
+        <div>
+          <img src="assets/logos/ProtiNova_logotipo.png" alt="ProtiNova" style="height:48px;margin-bottom:24px;" />
+          <h2 style="color:var(--verde-bosque);">La harina proteica que su fórmula ya estaba buscando</h2>
+          <p style="margin-top:16px;">ProtiNova by GreenCore Nutrition es una <em>novel protein</em> hipoalergénica, sin pescado, sin soja y sin contaminación cruzada con alérgenos comunes. Digestibilidad superior al 90% y perfil aminoacídico completo, validado por la Universidad de Zaragoza y la UPV.</p>
+          <ul style="list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <span style="color:var(--verde-protinova);font-weight:700;margin-top:2px;">✓</span>
+              <span><strong>Petfood premium:</strong> novel protein recomendada para dietas de eliminación veterinaria</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <span style="color:var(--verde-protinova);font-weight:700;margin-top:2px;">✓</span>
+              <span><strong>Acuicultura:</strong> mejora el FCR (Feed Conversion Ratio) frente a proteína vegetal</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <span style="color:var(--verde-protinova);font-weight:700;margin-top:2px;">✓</span>
+              <span><strong>Regulatorio:</strong> conforme al Reglamento (UE) 2017/893 sobre proteínas animales transformadas</span>
+            </li>
+          </ul>
+          <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
+            <a href="pages/productos.html" class="btn btn--primary">Ver ficha técnica completa</a>
+            <a href="pages/contacto.html" class="btn" style="border:2px solid var(--verde-bosque);color:var(--verde-bosque);">Solicitar muestra</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PARA QUIÉN ══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Segmentos de cliente</span>
+        <h2>Diseñado para quienes no admiten puntos medios</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <img class="card__img" src="https://images.unsplash.com/photo-1450778869180-c3a35beb73b2?w=800&q=80" alt="Petfood premium" />
+          <div class="card__body">
+            <span class="card__tag">Petfood premium</span>
+            <h3>Fabricantes de alimento para mascotas</h3>
+            <p>Novel protein hipoalergénica para dietas de eliminación. Sin pescado. Sin soja. Trazabilidad por lote para superar auditorías de cadenas retail exigentes.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__img" src="https://images.unsplash.com/photo-1534043464-7e2f0e29c1d4?w=800&q=80" alt="Acuicultura" />
+          <div class="card__body">
+            <span class="card__tag">Acuicultura</span>
+            <h3>Productores de salmón, dorada y lubina</h3>
+            <p>Digestibilidad superior al 90% y quitina que activa el sistema inmune del pez. Mejora el FCR y reduce la necesidad de antibióticos. Argumento de "salmón sostenible" para el consumidor final.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__img" src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80" alt="Inversores" />
+          <div class="card__body">
+            <span class="card__tag">Inversores</span>
+            <h3>Inversores y financiadores</h3>
+            <p>Mercado europeo con CAGR del 16,9% (2024–2030, Grand View Research). CAPEX inicial reducido a &lt;1,2 M€ gracias a incentivos FITE y Fondo de Transición Justa en Teruel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALES ══ -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Lo que dicen nuestros clientes</span>
+        <h2>Confianza construida con datos, no con promesas</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p class="testimonial__quote">"Cuando recibimos un saco de ProtiNova, no recibimos solo harina. Recibimos un historial completo: sustrato utilizado, parámetros de cría, controles de calidad. Todo auditable en segundos. Eso simplifica enormemente nuestro proceso de homologación."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">MR</div>
+            <div>
+              <div class="testimonial__name">M. Rodríguez</div>
+              <div class="testimonial__role">Director de Compras · Fabricante de petfood premium, Valencia</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__quote">"Estábamos buscando una fuente de proteína que nos permitiera mejorar el FCR sin comprometer el perfil de aminoácidos. ProtiNova lo cumple y, además, nos da los datos de huella de carbono que necesitamos para nuestro informe CSRD."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">JL</div>
+            <div>
+              <div class="testimonial__name">J. López</div>
+              <div class="testimonial__role">Director Técnico · Empresa de acuicultura, Murcia</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__quote">"El equipo del Application Lab trabajó con nuestros formuladores durante tres semanas. El resultado fue una fórmula adaptada a nuestra línea veterinaria. Ese nivel de servicio es imposible con un operador masivo."</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">AP</div>
+            <div>
+              <div class="testimonial__name">A. Pérez</div>
+              <div class="testimonial__role">Responsable de Innovación · Marca veterinaria, Barcelona</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SOSTENIBILIDAD BLOQUE ══ -->
+  <section class="section section--dark">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+        <div>
+          <span class="tag-esg">Economía circular · ESG · CSRD</span>
+          <h2 class="text-white mt-16">La sostenibilidad de ProtiNova no es una promesa: es un número.</h2>
+          <p style="margin-top:16px;">Cada lote viene con su cálculo de huella de carbono verificado, listo para integrarse en su informe CSRD y en el cómputo de Scope 3 de su empresa.</p>
+          <ul style="list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:14px;">
+            <li style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="color:var(--beige-trigo);font-size:1.1rem;margin-top:2px;">→</span>
+              <span>Frass convertido en <strong style="color:var(--beige-trigo);">fertilizante orgánico certificado</strong></span>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="color:var(--beige-trigo);font-size:1.1rem;margin-top:2px;">→</span>
+              <span>Biogás por digestión anaerobia: <strong style="color:var(--beige-trigo);">70–80% de autoconsumo energético</strong> en régimen de crucero</span>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="color:var(--beige-trigo);font-size:1.1rem;margin-top:2px;">→</span>
+              <span>Alineado con <strong style="color:var(--beige-trigo);">ODS 2, 8, 12 y 13</strong> de la Agenda 2030</span>
+            </li>
+          </ul>
+          <a href="pages/sostenibilidad.html" class="btn btn--outline mt-32">Ver informe de sostenibilidad →</a>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1464938050520-f8b6f7b9b3d3?w=800&q=80"
+               alt="Modelo circular GreenCore"
+               style="border-radius:12px;width:100%;height:380px;object-fit:cover;opacity:0.85;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BLOG PREVIEW ══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Educación y conocimiento</span>
+        <h2>Artículos técnicos para formuladores exigentes</h2>
+        <p>Publicamos mensualmente. Datos, fuentes y sin palabras vacías.</p>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80" alt="FCR y proteína de insecto" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta">Técnico · 8 min de lectura</div>
+            <h3>¿Qué es el FCR y por qué la harina de insecto lo mejora?</h3>
+            <p>El Índice de Conversión Alimenticia mide los kilos de pienso necesarios para producir un kilo de crecimiento animal. Aquí explicamos por qué ProtiNova mejora el FCR frente a la proteína vegetal.</p>
+            <a href="pages/blog.html" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="CSRD y Scope 3" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta">ESG · Regulatorio · 6 min de lectura</div>
+            <h3>Cómo integrar el cálculo de Scope 3 en su informe CSRD</h3>
+            <p>La Directiva europea de sostenibilidad obliga a reportar las emisiones de la cadena de suministro. Le explicamos cómo los datos de ProtiNova simplifican este proceso.</p>
+            <a href="pages/blog.html" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80" alt="Mercado proteína insecto Europa" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta">Mercado · 5 min de lectura</div>
+            <h3>El mercado europeo de proteína de insecto crece al 16,9% anual</h3>
+            <p>Según Grand View Research, el mercado crece a tasas sostenidas hasta 2030. ¿Qué significa para los formuladores y qué lecciones deja el caso Ynsect?</p>
+            <a href="pages/blog.html" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-32">
+        <a href="pages/blog.html" class="btn btn--primary">Ver todos los artículos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA FINAL ══ -->
+  <section class="section" style="background:var(--verde-bosque);">
+    <div class="container text-center">
+      <h2 class="text-white">¿Listo para reformular con datos reales?</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;">
+        Solicite su muestra técnica gratuita. Se la enviamos en 5 días hábiles, con ficha técnica ampliada, aminograma completo y certificación de trazabilidad por lote.
+      </p>
+      <div style="margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="pages/contacto.html" class="btn btn--beige">Solicitar muestra técnica gratuita</a>
+        <a href="pages/visitanos.html" class="btn btn--outline">Visitar la planta en Teruel</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logos/GreenCore_Negativo.png" alt="GreenCore Nutrition" />
+        <p>Innovación proteica para marcas exigentes. Harina de <em>Tenebrio molitor</em> con trazabilidad total, modelo circular verificable y co-desarrollo técnico. Producida en Teruel, Aragón.</p>
+        <div class="footer__social mt-16">
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="pages/quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="pages/quienes-somos.html#equipo">Equipo</a></li>
+          <li><a href="pages/quienes-somos.html#valores">Valores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="pages/productos.html">ProtiNova</a></li>
+          <li><a href="pages/productos.html#ficha">Ficha técnica</a></li>
+          <li><a href="pages/sostenibilidad.html">Sostenibilidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="pages/contacto.html">Solicitar muestra</a></li>
+          <li><a href="pages/visitanos.html">Visitar la planta</a></li>
+          <li><a href="pages/blog.html">Blog técnico</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 GreenCore Nutrition S.L. · Teruel, Aragón, España · greencore-nutrition.com</span>
+      <span>Proyecto académico EMBA EDEM · Uso exclusivamente educativo</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const links = document.querySelector('.navbar__links');
+      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '70px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'white';
+      links.style.padding = '16px 24px';
+      links.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
+    }
+  </script>
+</body>
+</html>
