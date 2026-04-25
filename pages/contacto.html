@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — GreenCore Nutrition</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="icon" type="image/png" href="../assets/logos/GreenCore_isotipo.png" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/logos/GreenCore_logotipo.png" alt="GreenCore Nutrition" />
+      </a>
+      <ul class="navbar__links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="productos.html">Nuestros productos</a></li>
+        <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+        <li><a href="blog.html">Educación</a></li>
+        <li><a href="visitanos.html">Visítanos</a></li>
+        <li><a href="contacto.html" class="navbar__cta active">Solicita una muestra</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <h1>Hablemos</h1>
+    <p>Solicite una muestra técnica gratuita, concierte una visita al Application Lab o háganos llegar su consulta. Un KAM responderá en menos de 24 horas hábiles.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:3fr 2fr;gap:64px;align-items:start;">
+
+        <!-- FORMULARIO PRINCIPAL -->
+        <div>
+          <h2 style="color:var(--verde-bosque);margin-bottom:8px;">Formulario de contacto</h2>
+          <p style="margin-bottom:32px;color:#666;">Cuéntenos quién es y qué necesita. La información que comparta nos permite asignarle el KAM adecuado desde el primer contacto.</p>
+
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre *</label>
+                <input type="text" name="nombre" required placeholder="Su nombre" />
+              </div>
+              <div class="form-group">
+                <label>Apellidos *</label>
+                <input type="text" name="apellidos" required placeholder="Sus apellidos" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email corporativo *</label>
+                <input type="email" name="email" required placeholder="nombre@empresa.com" />
+              </div>
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="tel" name="telefono" placeholder="+34 600 000 000" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Empresa *</label>
+                <input type="text" name="empresa" required placeholder="Nombre de su empresa" />
+              </div>
+              <div class="form-group">
+                <label>País</label>
+                <select name="pais">
+                  <option value="">Seleccione país</option>
+                  <option>España</option>
+                  <option>Francia</option>
+                  <option>Portugal</option>
+                  <option>Italia</option>
+                  <option>Alemania</option>
+                  <option>Otro país de la UE</option>
+                  <option>Fuera de la UE</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Perfil profesional *</label>
+              <select name="perfil" required>
+                <option value="">Seleccione su perfil</option>
+                <option>Formulador técnico / Nutrólogo animal</option>
+                <option>Director de compras / Supply chain</option>
+                <option>Responsable de sostenibilidad / ESG / Innovación</option>
+                <option>Inversor / Financiador</option>
+                <option>Responsable de comunicación / Marketing</option>
+                <option>Investigador / Universidad / Centro tecnológico</option>
+                <option>Centro escolar / Educación</option>
+                <option>Periodista / Medios</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>¿En qué segmento trabaja?</label>
+              <select name="segmento">
+                <option value="">Seleccione segmento</option>
+                <option>Petfood premium</option>
+                <option>Acuicultura</option>
+                <option>Ambos</option>
+                <option>Otro (alimentación humana, I+D, etc.)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Motivo del contacto *</label>
+              <select name="motivo" required id="motivo-select" onchange="updateForm()">
+                <option value="">Seleccione motivo</option>
+                <option value="muestra">Solicitar muestra técnica gratuita</option>
+                <option value="visita-cliente">Visitar la planta / Application Lab (cliente)</option>
+                <option value="visita-educativa">Visita educativa (escuela / universidad)</option>
+                <option value="visita-inversor">Visita para inversores</option>
+                <option value="propuesta">Solicitar propuesta comercial</option>
+                <option value="colaboracion">Propuesta de colaboración / I+D</option>
+                <option value="consulta">Consulta técnica</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <!-- Campo condicional: volumen estimado -->
+            <div class="form-group" id="volumen-group" style="display:none;">
+              <label>Volumen estimado de compra (t/año)</label>
+              <select name="volumen">
+                <option value="">Seleccione rango</option>
+                <option>&lt; 5 t/año</option>
+                <option>5–20 t/año</option>
+                <option>20–50 t/año</option>
+                <option>50–100 t/año</option>
+                <option>&gt; 100 t/año</option>
+                <option>Por definir</option>
+              </select>
+            </div>
+
+            <!-- Campo condicional: fecha de visita -->
+            <div class="form-group" id="fecha-group" style="display:none;">
+              <label>Fecha preferida de visita</label>
+              <input type="date" name="fecha" min="2025-01-01" />
+            </div>
+
+            <div class="form-group">
+              <label>Mensaje</label>
+              <textarea name="mensaje" placeholder="Cuéntenos brevemente qué busca, qué producto formula y cualquier detalle relevante para su consulta..."></textarea>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;">
+              <input type="checkbox" id="privacidad" name="privacidad" required style="width:auto;margin-top:3px;flex-shrink:0;" />
+              <label for="privacidad" style="font-size:0.85rem;font-weight:400;color:#666;">
+                Acepto la <a href="#" style="color:var(--verde-protinova);">política de privacidad</a> y consiento el tratamiento de mis datos para gestionar esta solicitud. GreenCore Nutrition no comparte datos con terceros ni envía comunicaciones no solicitadas.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;font-size:1rem;padding:14px;">
+              Enviar solicitud →
+            </button>
+          </form>
+
+          <!-- CONFIRMACIÓN -->
+          <div id="form-success" style="display:none;background:#e8f5f0;border-radius:var(--radius);padding:32px;text-align:center;border:2px solid var(--verde-protinova);">
+            <div style="font-size:2.5rem;margin-bottom:16px;">✅</div>
+            <h3 style="color:var(--verde-bosque);">Solicitud recibida</h3>
+            <p style="margin-top:8px;">El KAM asignado le contactará en menos de 24 horas hábiles. Si ha solicitado una muestra, la recibirá en 5 días hábiles con ficha técnica ampliada y aminograma completo.</p>
+          </div>
+        </div>
+
+        <!-- SIDEBAR INFO -->
+        <div style="display:flex;flex-direction:column;gap:24px;">
+
+          <div style="background:var(--gris-claro);border-radius:var(--radius);padding:28px;">
+            <h3 style="color:var(--verde-bosque);margin-bottom:16px;">¿Qué incluye la muestra técnica?</h3>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;font-size:0.88rem;">
+              <li style="display:flex;gap:8px;">✓ <span>Muestra de ProtiNova (250 g)</span></li>
+              <li style="display:flex;gap:8px;">✓ <span>Ficha técnica ampliada con aminograma completo</span></li>
+              <li style="display:flex;gap:8px;">✓ <span>Código QR de trazabilidad del lote</span></li>
+              <li style="display:flex;gap:8px;">✓ <span>Certificado de análisis (COA) del lote</span></li>
+              <li style="display:flex;gap:8px;">✓ <span>Cálculo de huella de carbono del lote</span></li>
+              <li style="display:flex;gap:8px;">✓ <span>Contacto directo con su KAM asignado</span></li>
+            </ul>
+            <p style="font-size:0.82rem;color:#888;margin-top:16px;">Entrega en 5 días hábiles desde la confirmación. España peninsular sin coste. Consultar para otros destinos.</p>
+          </div>
+
+          <div style="background:var(--verde-bosque);border-radius:var(--radius);padding:28px;color:white;">
+            <h3 style="color:var(--blanco);margin-bottom:16px;">Contacto directo</h3>
+            <div style="display:flex;flex-direction:column;gap:14px;font-size:0.88rem;">
+              <div style="display:flex;gap:10px;">
+                <span>📧</span>
+                <span>info@greencore-nutrition.com</span>
+              </div>
+              <div style="display:flex;gap:10px;">
+                <span>📞</span>
+                <span>+34 978 000 000<br/><small style="color:rgba(255,255,255,0.7);">Lunes a jueves, 9h–18h</small></span>
+              </div>
+              <div style="display:flex;gap:10px;">
+                <span>📍</span>
+                <span>Polígono Las Celtibéricas<br/>Teruel, Aragón, España</span>
+              </div>
+              <div style="display:flex;gap:10px;">
+                <span>💼</span>
+                <a href="#" style="color:var(--beige-trigo);">linkedin.com/company/greencore-nutrition</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--gris-claro);border-radius:var(--radius);padding:28px;">
+            <h3 style="color:var(--verde-bosque);margin-bottom:12px;">Tiempo de respuesta</h3>
+            <p style="font-size:0.88rem;color:#555;">Un KAM responde en <strong>menos de 24 horas hábiles</strong>. Todos los comentarios en LinkedIn reciben respuesta el mismo día.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="../assets/logos/GreenCore_Negativo.png" alt="GreenCore Nutrition" />
+        <p>Innovación proteica para marcas exigentes. Producida en Teruel, Aragón.</p>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="quienes-somos.html#valores">Valores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="productos.html">ProtiNova</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Solicitar muestra</a></li>
+          <li><a href="visitanos.html">Visitar la planta</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 GreenCore Nutrition S.L. · Teruel, Aragón, España</span>
+      <span>Proyecto académico EMBA EDEM · Uso exclusivamente educativo</span>
+    </div>
+  </footer>
+
+  <script>
+    function updateForm() {
+      const motivo = document.getElementById('motivo-select').value;
+      const volumenGroup = document.getElementById('volumen-group');
+      const fechaGroup = document.getElementById('fecha-group');
+      volumenGroup.style.display = ['muestra','propuesta','colaboracion'].includes(motivo) ? 'block' : 'none';
+      fechaGroup.style.display = ['visita-cliente','visita-educativa','visita-inversor'].includes(motivo) ? 'block' : 'none';
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('form-success').offsetTop - 100, behavior: 'smooth' });
+    }
+
+    // Pre-seleccionar motivo si viene en la URL
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get('tipo');
+    if (tipo) {
+      const select = document.getElementById('motivo-select');
+      select.value = tipo;
+      updateForm();
+    }
+  </script>
+</body>
+</html>

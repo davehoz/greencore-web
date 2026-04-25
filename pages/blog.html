@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educación — GreenCore Nutrition</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="icon" type="image/png" href="../assets/logos/GreenCore_isotipo.png" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/logos/GreenCore_logotipo.png" alt="GreenCore Nutrition" />
+      </a>
+      <ul class="navbar__links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="productos.html">Nuestros productos</a></li>
+        <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+        <li><a href="blog.html" class="active">Educación</a></li>
+        <li><a href="visitanos.html">Visítanos</a></li>
+        <li><a href="contacto.html" class="navbar__cta">Solicita una muestra</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <h1>Educación y conocimiento</h1>
+    <p>Artículos técnicos, informes sectoriales y casos de éxito. Todo con datos, fuentes y sin palabras vacías.</p>
+  </section>
+
+  <!-- FILTROS -->
+  <section style="background:var(--gris-claro);padding:24px 0;border-bottom:1px solid var(--gris-medio);">
+    <div class="container" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:0.85rem;font-weight:600;color:#666;">Filtrar por:</span>
+      <button onclick="filterBlog('all')" id="btn-all"
+        style="padding:6px 16px;border-radius:20px;border:2px solid var(--verde-bosque);background:var(--verde-bosque);color:white;cursor:pointer;font-size:0.82rem;font-weight:600;">
+        Todos
+      </button>
+      <button onclick="filterBlog('tecnico')" id="btn-tecnico"
+        style="padding:6px 16px;border-radius:20px;border:2px solid var(--gris-medio);background:white;color:var(--gris-carbon);cursor:pointer;font-size:0.82rem;font-weight:600;">
+        Técnico
+      </button>
+      <button onclick="filterBlog('esg')" id="btn-esg"
+        style="padding:6px 16px;border-radius:20px;border:2px solid var(--gris-medio);background:white;color:var(--gris-carbon);cursor:pointer;font-size:0.82rem;font-weight:600;">
+        ESG y regulatorio
+      </button>
+      <button onclick="filterBlog('mercado')" id="btn-mercado"
+        style="padding:6px 16px;border-radius:20px;border:2px solid var(--gris-medio);background:white;color:var(--gris-carbon);cursor:pointer;font-size:0.82rem;font-weight:600;">
+        Mercado
+      </button>
+      <button onclick="filterBlog('empresa')" id="btn-empresa"
+        style="padding:6px 16px;border-radius:20px;border:2px solid var(--gris-medio);background:white;color:var(--gris-carbon);cursor:pointer;font-size:0.82rem;font-weight:600;">
+        Empresa y equipo
+      </button>
+    </div>
+  </section>
+
+  <!-- ARTÍCULOS -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid" id="blog-grid">
+
+        <div class="blog-card" data-cat="tecnico">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80" alt="FCR" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span class="card__tag">Técnico</span> · Marzo 2025 · 8 min</div>
+            <h3>¿Qué es el FCR y por qué la harina de insecto lo mejora?</h3>
+            <p>El Índice de Conversión Alimenticia (FCR) mide los kilos de pienso necesarios para producir un kilo de crecimiento animal. ProtiNova supera al 75–80% de digestibilidad de la proteína vegetal. Explicamos los datos.</p>
+            <a href="#" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+
+        <div class="blog-card" data-cat="esg">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="CSRD" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span class="tag-esg">ESG</span> · Febrero 2025 · 6 min</div>
+            <h3>Cómo integrar el cálculo de Scope 3 en su informe CSRD</h3>
+            <p>La Directiva CSRD obliga a las grandes empresas a reportar las emisiones de su cadena de suministro. Los datos de ProtiNova simplifican este proceso. Guía paso a paso.</p>
+            <a href="#" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+
+        <div class="blog-card" data-cat="mercado">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80" alt="Mercado insecto" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span class="card__tag">Mercado</span> · Enero 2025 · 5 min</div>
+            <h3>El mercado europeo de proteína de insecto crece al 16,9% anual: ¿qué significa para los formuladores?</h3>
+            <p>Según Grand View Research (2025), el mercado crece hasta 2030. El caso Ynsect (600 M€ captados, liquidación en 2025) deja lecciones clave. Las explicamos sin rodeos.</p>
+            <a href="#" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+
+        <div class="blog-card" data-cat="tecnico">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80" alt="Aminograma" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span class="card__tag">Técnico</span> · Diciembre 2024 · 7 min</div>
+            <h3>Aminograma completo de ProtiNova: los datos que su formulador necesita</h3>
+            <p>Publicamos el perfil completo de aminoácidos esenciales de ProtiNova, con los valores de digestibilidad ileal estandarizada validados en colaboración con la Universidad de Zaragoza.</p>
+            <a href="#" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+
+        <div class="blog-card" data-cat="empresa">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1576086135395-3b93e6fc53e5?w=800&q=80" alt="Planta Teruel" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span class="card__tag">Empresa</span> · Noviembre 2024 · 4 min</div>
+            <h3>Primer lote certificado enviado: así funciona el proceso de secado por microondas en Teruel</h3>
+            <p>Un recorrido visual por el proceso de producción de ProtiNova, desde la sala de cría hasta el saco con el sello "Tenebrio Trazado". Con el equipo que lo hizo posible.</p>
+            <a href="#" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+
+        <div class="blog-card" data-cat="esg">
+          <img class="blog-card__img" src="https://images.unsplash.com/photo-1464938050520-f8b6f7b9b3d3?w=800&q=80" alt="Frass fertilizante" />
+          <div class="blog-card__body">
+            <div class="blog-card__meta"><span class="tag-esg">ESG</span> · Octubre 2024 · 5 min</div>
+            <h3>De residuo agrícola a fertilizante orgánico: cómo el frass de Tenebrio cierra el círculo</h3>
+            <p>El frass es rico en nitrógeno, fósforo, potasio y quitina. Explicamos el proceso de valorización y por qué esto genera datos reales de huella de carbono para sus informes de sostenibilidad.</p>
+            <a href="#" class="blog-card__link">Leer artículo →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section section--dark">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+        <div>
+          <h2 class="text-white">Artículo técnico mensual.<br/>Informes sectoriales trimestrales.</h2>
+          <p style="color:rgba(255,255,255,0.8);margin-top:16px;">Sin spam. Sin palabras vacías. Solo datos y análisis que su equipo puede usar directamente.</p>
+        </div>
+        <div>
+          <form onsubmit="handleNewsletter(event)" style="display:flex;flex-direction:column;gap:16px;">
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0;">
+                <input type="text" placeholder="Nombre" required />
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <input type="text" placeholder="Empresa" />
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <input type="email" placeholder="Email corporativo" required />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <select>
+                <option value="">Perfil profesional</option>
+                <option>Formulador técnico / Nutrólogo animal</option>
+                <option>Director de compras / Supply chain</option>
+                <option>Responsable de sostenibilidad / ESG</option>
+                <option>Inversor / Financiador</option>
+                <option>Investigador / Universidad</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn--beige">Suscribirse al blog técnico</button>
+          </form>
+          <p id="newsletter-ok" style="display:none;color:var(--beige-trigo);margin-top:12px;font-weight:600;">✓ ¡Suscripción confirmada! Le enviaremos el próximo artículo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="../assets/logos/GreenCore_Negativo.png" alt="GreenCore Nutrition" />
+        <p>Innovación proteica para marcas exigentes. Producida en Teruel, Aragón.</p>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="quienes-somos.html#valores">Valores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="productos.html">ProtiNova</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="contacto.html">Solicitar muestra</a></li>
+          <li><a href="visitanos.html">Visitar la planta</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 GreenCore Nutrition S.L. · Teruel, Aragón, España</span>
+      <span>Proyecto académico EMBA EDEM · Uso exclusivamente educativo</span>
+    </div>
+  </footer>
+
+  <script>
+    function filterBlog(cat) {
+      const cards = document.querySelectorAll('.blog-card');
+      const buttons = document.querySelectorAll('[id^="btn-"]');
+      buttons.forEach(b => {
+        b.style.background = 'white';
+        b.style.color = '#333';
+        b.style.borderColor = '#ccc';
+      });
+      const active = document.getElementById('btn-' + cat);
+      if (active) {
+        active.style.background = 'var(--verde-bosque)';
+        active.style.color = 'white';
+        active.style.borderColor = 'var(--verde-bosque)';
+      }
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    function handleNewsletter(e) {
+      e.preventDefault();
+      document.getElementById('newsletter-ok').style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
