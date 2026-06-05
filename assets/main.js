@@ -1,21 +1,25 @@
 /* GreenCore Nutrition — Animaciones globales */
 
-/* ── 1. Page-hero entrance (subpages) ───────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* Animate .page-hero children on load */
+  /* ── 1. Page-hero entrance (subpages) ─────────────────────────────────── */
   var pageHero = document.querySelector('.page-hero');
   if (pageHero) {
-    var els = pageHero.querySelectorAll('h1, p, .tag-esg, .eyebrow');
-    els.forEach(function (el, i) {
+    var heroEls = pageHero.querySelectorAll('h1, p, .tag-esg, .eyebrow');
+    heroEls.forEach(function (el, i) {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       el.style.transitionDelay = (i * 0.12) + 's';
-      setTimeout(function () {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, 30);
+    });
+    /* Double-rAF: ensure browser renders opacity:0 before triggering */
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        heroEls.forEach(function (el) {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        });
+      });
     });
   }
 
@@ -34,22 +38,25 @@ document.addEventListener('DOMContentLoaded', function () {
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        /* Stagger siblings in the same parent */
         var parent = entry.target.parentElement;
         var siblings = Array.from(parent.children).filter(function (c) {
           return c.style.opacity === '0';
         });
         var idx = siblings.indexOf(entry.target);
         var delay = Math.min(idx * 0.08, 0.4);
-
         entry.target.style.transitionDelay = delay + 's';
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
 
-  targets.forEach(function (el) { observer.observe(el); });
+  /* Double-rAF: ensures browser paints opacity:0 before observation starts */
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      targets.forEach(function (el) { observer.observe(el); });
+    });
+  });
 
 });
