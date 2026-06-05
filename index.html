@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- ══ NAVBAR ══ -->
   <nav class="navbar">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo">
@@ -30,25 +29,40 @@
     </div>
   </nav>
 
-  <!-- ══ HERO ══ -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero__inner">
       <div class="hero__content">
         <span class="hero__label">Producido en Teruel, Aragón · España</span>
         <h1>La proteína que su fórmula necesita. Con la trazabilidad que su cliente exige.</h1>
-        <p>GreenCore produce tres ingredientes de <em>Tenebrio molitor</em> — MolPro, MolOil y MolFrass — con trazabilidad completa por lote y modelo circular verificable. Para petfood premium y acuicultura de valor.</p>
+        <p>Proteína, aceite y fertilizante de <em>Tenebrio molitor</em>. Trazabilidad completa por lote y modelo circular verificable.</p>
         <div class="hero__actions">
           <a href="pages/contacto.html" class="btn btn--beige">Solicita una muestra técnica gratuita</a>
-          <a href="pages/productos.html" class="btn btn--outline">Ver ficha técnica</a>
+          <a href="pages/productos.html" class="btn btn--outline">Ver productos</a>
         </div>
       </div>
-      <div class="hero__image">
-        <img src="assets/img/hero-planta.jpg" alt="Instalaciones GreenCore Nutrition en Teruel" />
+      <div class="hero__image" style="position:relative;">
+        <div id="hero-slider" style="border-radius:16px;overflow:hidden;height:420px;position:relative;">
+          <div class="hero-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:1;">
+            <img src="assets/img/hero-planta.jpg" alt="Planta de producción GreenCore" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="hero-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;">
+            <img src="assets/img/equipo.jpg" alt="Equipo GreenCore" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="hero-slide" style="position:absolute;inset:0;transition:opacity 0.7s ease;opacity:0;">
+            <img src="assets/img/application-lab.jpg" alt="Application Lab en Teruel" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:8px;margin-top:12px;">
+          <button class="hero-dot active-dot" onclick="setHeroSlide(0)" aria-label="Slide 1"></button>
+          <button class="hero-dot" onclick="setHeroSlide(1)" aria-label="Slide 2"></button>
+          <button class="hero-dot" onclick="setHeroSlide(2)" aria-label="Slide 3"></button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ STATS ══ -->
+  <!-- STATS -->
   <section class="section--dark">
     <div class="stats">
       <div class="stat">
@@ -60,78 +74,66 @@
         <div class="stat__label">Digestibilidad validada</div>
       </div>
       <div class="stat">
-        <div class="stat__number">16,9%</div>
-        <div class="stat__label">CAGR del mercado 2024–2030</div>
+        <div class="stat__number">UE 2017/893</div>
+        <div class="stat__label">Conformidad regulatoria</div>
       </div>
       <div class="stat">
         <div class="stat__number">70–80%</div>
-        <div class="stat__label">Autoconsumo energético en régimen estable</div>
+        <div class="stat__label">Autoconsumo energético</div>
       </div>
       <div class="stat">
         <div class="stat__number">12–15</div>
-        <div class="stat__label">Empleos directos en entorno rural</div>
+        <div class="stat__label">Empleos directos en Teruel</div>
       </div>
     </div>
   </section>
 
-  <!-- ══ TRES PILARES ══ -->
+  <!-- TRES PILARES -->
   <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Nuestra propuesta de valor</span>
-        <h2>Tres pilares que los operadores masivos no pueden replicar</h2>
-        <p>GreenCore no compite en precio. Compite en calidad técnica, trazabilidad y sostenibilidad verificable.</p>
+        <h2>Tres razones por las que nuestros clientes renuevan</h2>
       </div>
       <div class="pillars">
         <div class="pillar">
-          <div class="pillar__icon">🔍</div>
-          <h3>Trazabilidad total por lote</h3>
-          <p>Cada saco lleva un código QR con el recorrido completo del producto: desde el huevo de <em>Tenebrio molitor</em> hasta su entrega. Una herramienta de negocio real para facilitar homologaciones y superar auditorías de proveedores.</p>
+          <div class="pillar__stat">100%</div>
+          <div class="pillar__stat-label">trazabilidad por lote</div>
+          <h3>Trazabilidad total</h3>
+          <p>Código QR auditable en segundos. Facilita homologaciones y auditorías de proveedores.</p>
           <a href="pages/productos.html" class="btn btn--primary mt-24" style="font-size:0.85rem;padding:8px 18px;">Ver sello Tenebrio Trazado →</a>
         </div>
         <div class="pillar">
-          <div class="pillar__icon">♻️</div>
+          <div class="pillar__stat">0</div>
+          <div class="pillar__stat-label">residuos del proceso</div>
           <h3>Modelo circular verificable</h3>
-          <p>El frass (excremento de las larvas) se convierte en fertilizante orgánico certificado. El biogás generado alimenta la propia planta. Esto produce datos reales de huella de carbono listos para su informe CSRD y cómputo de Scope 3.</p>
+          <p>Frass → fertilizante. Biogás → energía propia. Huella de carbono verificada, lista para CSRD.</p>
           <a href="pages/sostenibilidad.html" class="btn btn--primary mt-24" style="font-size:0.85rem;padding:8px 18px;">Ver modelo circular →</a>
         </div>
         <div class="pillar">
-          <div class="pillar__icon">🔬</div>
-          <h3>Co-desarrollo técnico</h3>
-          <p>No enviamos una muestra y esperamos su decisión. Trabajamos con su equipo de formulación en el Application Lab de Teruel hasta que el resultado sea exactamente el que su fórmula necesita. Con un KAM asignado con autonomía real.</p>
+          <div class="pillar__stat">3 sem.</div>
+          <div class="pillar__stat-label">tiempo medio de co-desarrollo</div>
+          <h3>Application Lab en Teruel</h3>
+          <p>Trabajamos con su equipo de formulación hasta que la fórmula funcione. Sin intermediarios.</p>
           <a href="pages/visitanos.html" class="btn btn--primary mt-24" style="font-size:0.85rem;padding:8px 18px;">Visitar el Application Lab →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ PRODUCTO DESTACADO ══ -->
+  <!-- PRODUCTO DESTACADO -->
   <section class="section section--beige">
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
         <div>
           <img src="assets/img/protinova-harina.jpg"
-               alt="ProtiNova — Harina de Tenebrio molitor"
+               alt="MolPro — Harina de Tenebrio molitor"
                style="border-radius:12px;width:100%;height:400px;object-fit:cover;box-shadow:0 8px 32px rgba(46,94,78,0.15);" />
         </div>
         <div>
           <img src="assets/logos/MolPro_logo.png" alt="MolPro" style="height:44px;margin-bottom:20px;" />
-          <h2 style="color:var(--verde-bosque);">MolPro: la harina proteica que su fórmula ya estaba buscando</h2>
-          <p style="margin-top:16px;">MolPro es una <em>novel protein</em> hipoalergénica obtenida de larvas de <em>Tenebrio molitor</em>. Sin pescado, sin soja y sin contaminación cruzada con alérgenos comunes. Digestibilidad superior al 90% y perfil aminoacídico completo, validado por la Universidad de Zaragoza y la UPV.</p>
-          <ul style="list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:12px;">
-            <li style="display:flex;align-items:flex-start;gap:10px;">
-              <span style="color:var(--verde-protinova);font-weight:700;margin-top:2px;">✓</span>
-              <span><strong>Petfood premium:</strong> novel protein recomendada para dietas de eliminación veterinaria</span>
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:10px;">
-              <span style="color:var(--verde-protinova);font-weight:700;margin-top:2px;">✓</span>
-              <span><strong>Acuicultura:</strong> mejora el FCR (Feed Conversion Ratio) frente a proteína vegetal</span>
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:10px;">
-              <span style="color:var(--verde-protinova);font-weight:700;margin-top:2px;">✓</span>
-              <span><strong>Regulatorio:</strong> conforme al Reglamento (UE) 2017/893 sobre proteínas animales transformadas</span>
-            </li>
-          </ul>
+          <h2 style="color:var(--verde-bosque);">La harina proteica que su fórmula ya estaba buscando</h2>
+          <p style="margin-top:16px;">Novel protein hipoalergénica sin pescado ni soja. Digestibilidad superior al 90%, perfil aminoacídico completo, validado por la Universidad de Zaragoza y la UPV.</p>
           <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;">
             <a href="pages/productos.html" class="btn btn--primary">Ver ficha técnica completa</a>
             <a href="pages/contacto.html" class="btn" style="border:2px solid var(--verde-bosque);color:var(--verde-bosque);">Solicitar muestra</a>
@@ -141,7 +143,7 @@
     </div>
   </section>
 
-  <!-- ══ PARA QUIÉN ══ -->
+  <!-- PARA QUIEN -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -154,7 +156,7 @@
           <div class="card__body">
             <span class="card__tag">Petfood premium</span>
             <h3>Fabricantes de alimento para mascotas</h3>
-            <p>Novel protein hipoalergénica para dietas de eliminación. Sin pescado. Sin soja. Trazabilidad por lote para superar auditorías de cadenas retail exigentes.</p>
+            <p>Novel protein hipoalergénica para dietas de eliminación. Sin pescado. Sin soja. Trazabilidad por lote.</p>
           </div>
         </div>
         <div class="card">
@@ -162,7 +164,7 @@
           <div class="card__body">
             <span class="card__tag">Acuicultura</span>
             <h3>Productores de salmón, dorada y lubina</h3>
-            <p>Digestibilidad superior al 90% y quitina que activa el sistema inmune del pez. Mejora el FCR y reduce la necesidad de antibióticos. Argumento de "salmón sostenible" para el consumidor final.</p>
+            <p>Mejora el FCR y reduce antibióticos. La quitina activa el sistema inmune del pez de forma natural.</p>
           </div>
         </div>
         <div class="card">
@@ -170,14 +172,14 @@
           <div class="card__body">
             <span class="card__tag">Socios y colaboradores</span>
             <h3>Universidades, centros tecnológicos y socios estratégicos</h3>
-            <p>Colaboramos con la Universidad de Zaragoza y la UPV para validar nuestros productos. Si su organización trabaja en proteína alternativa, sostenibilidad alimentaria o ingredientes funcionales, hablemos.</p>
+            <p>Colaboramos con la Universidad de Zaragoza y la UPV. Abiertos a nuevas alianzas en proteína alternativa.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ TESTIMONIALES ══ -->
+  <!-- TESTIMONIALES -->
   <section class="section section--gray">
     <div class="container">
       <div class="section-header">
@@ -186,27 +188,27 @@
       </div>
       <div class="testimonials-grid">
         <div class="testimonial">
-          <p class="testimonial__quote">"Cuando recibimos un lote de MolPro, no recibimos solo harina. Recibimos un historial completo: sustrato utilizado, parámetros de cría, controles de calidad. Todo auditable en segundos. Eso simplifica enormemente nuestro proceso de homologación."</p>
+          <p class="testimonial__quote">"Un historial completo auditable en segundos. El proceso de homologación se simplifica enormemente."</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">MR</div>
             <div>
               <div class="testimonial__name">M. Rodríguez</div>
-              <div class="testimonial__role">Director de Compras · Fabricante de petfood premium, Valencia</div>
+              <div class="testimonial__role">Director de Compras · Petfood premium, Valencia</div>
             </div>
           </div>
         </div>
         <div class="testimonial">
-          <p class="testimonial__quote">"Estábamos buscando una fuente de proteína que nos permitiera mejorar el FCR sin comprometer el perfil de aminoácidos. MolPro lo cumple y, además, nos da los datos de huella de carbono que necesitamos para nuestro informe CSRD."</p>
+          <p class="testimonial__quote">"MolPro mejora el FCR y nos proporciona los datos de huella de carbono para nuestro informe CSRD. Todo en un mismo proveedor."</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">JL</div>
             <div>
               <div class="testimonial__name">J. López</div>
-              <div class="testimonial__role">Director Técnico · Empresa de acuicultura, Murcia</div>
+              <div class="testimonial__role">Director Técnico · Acuicultura, Murcia</div>
             </div>
           </div>
         </div>
         <div class="testimonial">
-          <p class="testimonial__quote">"El equipo del Application Lab trabajó con nuestros formuladores durante tres semanas. El resultado fue una fórmula adaptada a nuestra línea veterinaria. Ese nivel de servicio es imposible con un operador masivo."</p>
+          <p class="testimonial__quote">"Tres semanas en el Application Lab con nuestros formuladores. El resultado fue una fórmula adaptada y validada para nuestra línea veterinaria."</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">AP</div>
             <div>
@@ -219,40 +221,7 @@
     </div>
   </section>
 
-  <!-- ══ SOSTENIBILIDAD BLOQUE ══ -->
-  <section class="section section--dark">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-        <div>
-          <span class="tag-esg">Economía circular · ESG · CSRD</span>
-          <h2 class="text-white mt-16">La sostenibilidad de GreenCore no es una promesa: es un número.</h2>
-          <p style="margin-top:16px;">Cada lote viene con su cálculo de huella de carbono verificado, listo para integrarse en su informe CSRD y en el cómputo de Scope 3 de su empresa.</p>
-          <ul style="list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:14px;">
-            <li style="display:flex;gap:12px;align-items:flex-start;">
-              <span style="color:var(--beige-trigo);font-size:1.1rem;margin-top:2px;">→</span>
-              <span>Frass convertido en <strong style="color:var(--beige-trigo);">fertilizante orgánico certificado</strong></span>
-            </li>
-            <li style="display:flex;gap:12px;align-items:flex-start;">
-              <span style="color:var(--beige-trigo);font-size:1.1rem;margin-top:2px;">→</span>
-              <span>Biogás por digestión anaerobia: <strong style="color:var(--beige-trigo);">70–80% de autoconsumo energético</strong> en régimen de crucero</span>
-            </li>
-            <li style="display:flex;gap:12px;align-items:flex-start;">
-              <span style="color:var(--beige-trigo);font-size:1.1rem;margin-top:2px;">→</span>
-              <span>Alineado con <strong style="color:var(--beige-trigo);">ODS 2, 8, 12 y 13</strong> de la Agenda 2030</span>
-            </li>
-          </ul>
-          <a href="pages/sostenibilidad.html" class="btn btn--outline mt-32">Ver informe de sostenibilidad →</a>
-        </div>
-        <div>
-          <img src="assets/img/sostenibilidad.jpg"
-               alt="Modelo circular GreenCore"
-               style="border-radius:12px;width:100%;height:380px;object-fit:cover;opacity:0.85;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ BLOG PREVIEW ══ -->
+  <!-- BLOG PREVIEW -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -264,27 +233,24 @@
         <div class="blog-card">
           <img class="blog-card__img" src="assets/img/laboratorio-fcr.jpg" alt="FCR y proteína de insecto" />
           <div class="blog-card__body">
-            <div class="blog-card__meta">Técnico · 8 min de lectura</div>
+            <div class="blog-card__meta">Técnico · 8 min</div>
             <h3>¿Qué es el FCR y por qué la harina de insecto lo mejora?</h3>
-            <p>El Índice de Conversión Alimenticia mide los kilos de pienso necesarios para producir un kilo de crecimiento animal. Aquí explicamos por qué MolPro mejora el FCR frente a la proteína vegetal.</p>
             <a href="pages/blog.html" class="blog-card__link">Leer artículo →</a>
           </div>
         </div>
         <div class="blog-card">
           <img class="blog-card__img" src="assets/img/csrd-datos.jpg" alt="CSRD y Scope 3" />
           <div class="blog-card__body">
-            <div class="blog-card__meta">ESG · Regulatorio · 6 min de lectura</div>
+            <div class="blog-card__meta">ESG · Regulatorio · 6 min</div>
             <h3>Cómo integrar el cálculo de Scope 3 en su informe CSRD</h3>
-            <p>La Directiva europea de sostenibilidad obliga a reportar las emisiones de la cadena de suministro. Le explicamos cómo los datos de GreenCore simplifican este proceso.</p>
             <a href="pages/blog.html" class="blog-card__link">Leer artículo →</a>
           </div>
         </div>
         <div class="blog-card">
           <img class="blog-card__img" src="assets/img/mercado-grafica.jpg" alt="Mercado proteína insecto Europa" />
           <div class="blog-card__body">
-            <div class="blog-card__meta">Mercado · 5 min de lectura</div>
+            <div class="blog-card__meta">Mercado · 5 min</div>
             <h3>El mercado europeo de proteína de insecto crece al 16,9% anual</h3>
-            <p>Según Grand View Research, el mercado crece a tasas sostenidas hasta 2030. ¿Qué significa para los formuladores y qué lecciones deja el caso Ynsect?</p>
             <a href="pages/blog.html" class="blog-card__link">Leer artículo →</a>
           </div>
         </div>
@@ -295,12 +261,12 @@
     </div>
   </section>
 
-  <!-- ══ CTA FINAL ══ -->
+  <!-- CTA FINAL -->
   <section class="section" style="background:var(--verde-bosque);">
     <div class="container text-center">
       <h2 class="text-white">¿Listo para reformular con datos reales?</h2>
-      <p style="color:rgba(255,255,255,0.8);margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;">
-        Solicite su muestra técnica gratuita de MolPro, MolOil o MolFrass. La enviamos en 5 días hábiles, con ficha técnica ampliada y certificación de trazabilidad por lote.
+      <p style="color:rgba(255,255,255,0.85);margin-top:12px;max-width:480px;margin-left:auto;margin-right:auto;">
+        Muestra técnica gratuita enviada en 5 días hábiles, con ficha técnica y certificación de trazabilidad por lote.
       </p>
       <div style="margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <a href="pages/contacto.html" class="btn btn--beige">Solicitar muestra técnica gratuita</a>
@@ -309,12 +275,12 @@
     </div>
   </section>
 
-  <!-- ══ FOOTER ══ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
         <img src="assets/logos/GreenCore_Negativo.png" alt="GreenCore Nutrition" />
-        <p>Innovación proteica para marcas exigentes. Harina de <em>Tenebrio molitor</em> con trazabilidad total, modelo circular verificable y co-desarrollo técnico. Producida en Teruel, Aragón.</p>
+        <p>Innovación proteica para marcas exigentes. Harina de <em>Tenebrio molitor</em> con trazabilidad total y modelo circular verificable. Producida en Teruel, Aragón.</p>
         <div class="footer__social mt-16">
           <a href="https://www.linkedin.com/in/greencore-nutrition-04b801408/" target="_blank" title="LinkedIn">in</a>
         </div>
@@ -328,7 +294,7 @@
         </ul>
       </div>
       <div>
-        <h4>Producto</h4>
+        <h4>Productos</h4>
         <ul>
           <li><a href="pages/productos.html#molpro">MolPro</a></li>
           <li><a href="pages/productos.html#moloil">MolOil</a></li>
@@ -351,7 +317,32 @@
     </div>
   </footer>
 
+  <style>
+    .hero-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.35); border: none; cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      padding: 0;
+    }
+    .hero-dot.active-dot {
+      background: var(--beige-trigo);
+      transform: scale(1.3);
+    }
+  </style>
+
   <script>
+    var heroIdx = 0;
+    var heroSlides = document.querySelectorAll('.hero-slide');
+    var heroDots   = document.querySelectorAll('.hero-dot');
+
+    function setHeroSlide(i) {
+      heroSlides.forEach(function(s, j) { s.style.opacity = j === i ? '1' : '0'; });
+      heroDots.forEach(function(d, j) { d.classList.toggle('active-dot', j === i); });
+      heroIdx = i;
+    }
+
+    setInterval(function() { setHeroSlide((heroIdx + 1) % heroSlides.length); }, 3500);
+
     function toggleMenu() {
       const links = document.querySelector('.navbar__links');
       links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
