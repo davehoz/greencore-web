@@ -40,153 +40,193 @@
         <p>GreenCore fracciona la larva de <em>Tenebrio molitor</em> en tres ingredientes distintos. Cada uno con su propia ficha técnica, certificación de trazabilidad y cálculo de huella de carbono por lote.</p>
       </div>
 
-      <!-- MolPro -->
-      <div id="molpro" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-        <div>
-          <img src="../assets/logos/MolPro_logo.png" alt="MolPro" style="height:44px;margin-bottom:16px;" />
-          <span class="tag-esg" style="background:#e8f2ee;color:var(--verde-bosque);margin-bottom:16px;display:inline-block;">Proteína · Petfood · Acuicultura</span>
-          <h2 style="color:var(--verde-bosque);">MolPro</h2>
-          <p style="font-size:1.05rem;color:#555;margin-top:4px;margin-bottom:16px;">Harina proteica de <em>Tenebrio molitor</em></p>
-          <p>Novel protein hipoalergénica con 65–72% de proteína bruta y digestibilidad ileal estandarizada superior al 90%. Sin pescado, sin soja, sin contaminación cruzada con alérgenos comunes. Validada por la Universidad de Zaragoza y la UPV.</p>
-          <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:24px;">
-            <thead>
-              <tr style="background:var(--gris-claro);">
-                <th style="text-align:left;padding:8px 12px;font-weight:600;">Parámetro</th>
-                <th style="text-align:right;padding:8px 12px;font-weight:600;">Valor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom:1px solid var(--gris-claro);">
-                <td style="padding:8px 12px;">Proteína bruta</td>
-                <td style="padding:8px 12px;text-align:right;font-weight:700;color:var(--verde-bosque);">65–72%</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--gris-claro);background:#fafafa;">
-                <td style="padding:8px 12px;">Digestibilidad ileal estandarizada</td>
-                <td style="padding:8px 12px;text-align:right;font-weight:700;color:var(--verde-bosque);">&gt;90%</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--gris-claro);">
-                <td style="padding:8px 12px;">Humedad</td>
-                <td style="padding:8px 12px;text-align:right;">&lt;8%</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--gris-claro);background:#fafafa;">
-                <td style="padding:8px 12px;">Cenizas</td>
-                <td style="padding:8px 12px;text-align:right;">4–7%</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 12px;">Quitina</td>
-                <td style="padding:8px 12px;text-align:right;">2–5%</td>
-              </tr>
-            </tbody>
-          </table>
-          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
-            <a href="contacto.html" class="btn btn--primary">Solicitar muestra de MolPro</a>
-            <a href="visitanos.html" class="btn" style="border:2px solid var(--verde-bosque);color:var(--verde-bosque);">Visitar el Application Lab</a>
-          </div>
-        </div>
-        <div>
-          <img src="../assets/img/csrd-datos.jpg"
-               alt="MolPro — Harina proteica de Tenebrio molitor"
-               style="border-radius:12px;width:100%;height:420px;object-fit:cover;box-shadow:var(--shadow);" />
-        </div>
+      <!-- Selector de productos -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;">
+        <button onclick="showProduct('molpro')" id="btn-molpro"
+          style="border:2px solid var(--verde-bosque);border-radius:var(--radius);padding:20px 16px;background:#e8f2ee;cursor:pointer;text-align:left;transition:all 0.25s;">
+          <img src="../assets/logos/MolPro_logo.png" alt="MolPro" style="height:36px;margin-bottom:10px;display:block;" />
+          <div style="font-size:0.95rem;font-weight:700;color:var(--verde-bosque);">MolPro</div>
+          <div style="font-size:0.82rem;color:#555;margin-top:4px;">Harina proteica · Petfood · Acuicultura</div>
+        </button>
+        <button onclick="showProduct('moloil')" id="btn-moloil"
+          style="border:2px solid transparent;border-radius:var(--radius);padding:20px 16px;background:var(--gris-claro);cursor:pointer;text-align:left;transition:all 0.25s;">
+          <img src="../assets/logos/MolOil_logo.png" alt="MolOil" style="height:36px;margin-bottom:10px;display:block;" />
+          <div style="font-size:0.95rem;font-weight:700;color:var(--verde-bosque);">MolOil</div>
+          <div style="font-size:0.82rem;color:#555;margin-top:4px;">Aceite fraccionado · Energía · Palatabilidad</div>
+        </button>
+        <button onclick="showProduct('molfrass')" id="btn-molfrass"
+          style="border:2px solid transparent;border-radius:var(--radius);padding:20px 16px;background:var(--gris-claro);cursor:pointer;text-align:left;transition:all 0.25s;">
+          <img src="../assets/logos/MolFrass_logo.png" alt="MolFrass" style="height:36px;margin-bottom:10px;display:block;" />
+          <div style="font-size:0.95rem;font-weight:700;color:var(--naranja-esg);">MolFrass</div>
+          <div style="font-size:0.82rem;color:#555;margin-top:4px;">Fertilizante orgánico · Circular · Agricultura</div>
+        </button>
       </div>
 
-      <hr style="border:none;border-top:1px solid var(--gris-claro);margin-bottom:80px;" />
-
-      <!-- MolOil -->
-      <div id="moloil" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-        <div>
-          <img src="../assets/img/petfood-perro.jpg"
-               alt="MolOil — Aceite de Tenebrio molitor"
-               style="border-radius:12px;width:100%;height:420px;object-fit:cover;box-shadow:var(--shadow);" />
-        </div>
-        <div>
-          <img src="../assets/logos/MolOil_logo.png" alt="MolOil" style="height:44px;margin-bottom:16px;" />
-          <span class="tag-esg" style="background:#e8f2ee;color:var(--verde-bosque);margin-bottom:16px;display:inline-block;">Lípidos · Energía · Palatabilidad</span>
-          <h2 style="color:var(--verde-bosque);">MolOil</h2>
-          <p style="font-size:1.05rem;color:#555;margin-top:4px;margin-bottom:16px;">Aceite fraccionado de <em>Tenebrio molitor</em></p>
-          <p>Fracción lipídica de alta densidad energética extraída por prensado en frío. Rico en ácidos grasos insaturados y laurico. Mejora la palatabilidad en piensos de petfood y aumenta la densidad energética en dietas para acuicultura sin incrementar el volumen del pienso.</p>
-          <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:24px;">
-            <thead>
-              <tr style="background:var(--gris-claro);">
-                <th style="text-align:left;padding:8px 12px;font-weight:600;">Parámetro</th>
-                <th style="text-align:right;padding:8px 12px;font-weight:600;">Valor</th>
-              </tr>
-            </thead>
-            <tbody>
+      <!-- Panel detalle: MolPro -->
+      <div id="panel-molpro" style="border:1px solid var(--gris-medio);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+        <div style="display:grid;grid-template-columns:180px 1fr 260px;">
+          <!-- Col 1: Logo + categorías -->
+          <div style="background:var(--verde-bosque);padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+            <img src="../assets/logos/MolPro_Negativo.png" alt="MolPro" style="width:120px;" />
+            <div style="text-align:center;">
+              <span style="display:inline-block;background:rgba(255,255,255,0.15);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin:3px 2px;">Petfood</span>
+              <span style="display:inline-block;background:rgba(255,255,255,0.15);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin:3px 2px;">Acuicultura</span>
+            </div>
+          </div>
+          <!-- Col 2: Descripción -->
+          <div style="padding:32px 28px;border-right:1px solid var(--gris-medio);">
+            <h3 style="color:var(--verde-bosque);margin-bottom:12px;">Harina proteica de <em>Tenebrio molitor</em></h3>
+            <p style="font-size:0.95rem;color:#444;line-height:1.7;">Novel protein hipoalergénica con 65–72% de proteína bruta y digestibilidad ileal estandarizada superior al 90%. Sin pescado, sin soja, sin contaminación cruzada con alérgenos comunes.</p>
+            <p style="font-size:0.9rem;color:#555;margin-top:12px;">Validada por la Universidad de Zaragoza y la UPV. Conforme al Reglamento (UE) 2017/893. Sello <strong>Tenebrio Trazado</strong> con código QR por lote.</p>
+            <div style="margin-top:24px;">
+              <a href="contacto.html?tipo=muestra&producto=molpro" class="btn btn--primary">Solicitar muestra de MolPro →</a>
+            </div>
+          </div>
+          <!-- Col 3: Especificaciones -->
+          <div style="padding:32px 24px;">
+            <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--verde-protinova);margin-bottom:16px;">Ficha técnica</div>
+            <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
               <tr style="border-bottom:1px solid var(--gris-claro);">
-                <td style="padding:8px 12px;">Contenido en grasa</td>
-                <td style="padding:8px 12px;text-align:right;font-weight:700;color:var(--verde-bosque);">&gt;95%</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--gris-claro);background:#fafafa;">
-                <td style="padding:8px 12px;">Energía bruta</td>
-                <td style="padding:8px 12px;text-align:right;font-weight:700;color:var(--verde-bosque);">~38 MJ/kg</td>
+                <td style="padding:8px 0;color:#666;">Proteína bruta</td>
+                <td style="padding:8px 0;text-align:right;font-weight:700;color:var(--verde-bosque);">65–72%</td>
               </tr>
               <tr style="border-bottom:1px solid var(--gris-claro);">
-                <td style="padding:8px 12px;">Humedad</td>
-                <td style="padding:8px 12px;text-align:right;">&lt;1%</td>
+                <td style="padding:8px 0;color:#666;">Digestibilidad ileal</td>
+                <td style="padding:8px 0;text-align:right;font-weight:700;color:var(--verde-bosque);">&gt;90%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Grasa bruta</td>
+                <td style="padding:8px 0;text-align:right;">12–18%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Humedad</td>
+                <td style="padding:8px 0;text-align:right;">&lt;8%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Cenizas</td>
+                <td style="padding:8px 0;text-align:right;">4–7%</td>
               </tr>
               <tr>
-                <td style="padding:8px 12px;">Ácido láurico (C12:0)</td>
-                <td style="padding:8px 12px;text-align:right;">40–50%</td>
+                <td style="padding:8px 0;color:#666;">Quitina</td>
+                <td style="padding:8px 0;text-align:right;">2–5%</td>
               </tr>
-            </tbody>
-          </table>
-          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
-            <a href="contacto.html" class="btn btn--primary">Solicitar muestra de MolOil</a>
+            </table>
           </div>
         </div>
       </div>
 
-      <hr style="border:none;border-top:1px solid var(--gris-claro);margin-bottom:80px;" />
-
-      <!-- MolFrass -->
-      <div id="molfrass" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
-        <div>
-          <img src="../assets/logos/MolFrass_logo.png" alt="MolFrass" style="height:44px;margin-bottom:16px;" />
-          <span class="tag-esg" style="margin-bottom:16px;display:inline-block;">Fertilizante · Economía circular · Agricultura</span>
-          <h2 style="color:var(--naranja-esg);">MolFrass</h2>
-          <p style="font-size:1.05rem;color:#555;margin-top:4px;margin-bottom:16px;">Fertilizante orgánico de <em>Tenebrio molitor</em></p>
-          <p>El frass (excremento de larvas) de GreenCore es rico en nitrógeno, fósforo, potasio y quitina. Certificado como fertilizante orgánico, cierra el ciclo de la planta devolviendo nutrientes al campo de las cooperativas cerealistas que suministran el sustrato de cría.</p>
-          <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:24px;">
-            <thead>
-              <tr style="background:var(--gris-claro);">
-                <th style="text-align:left;padding:8px 12px;font-weight:600;">Parámetro</th>
-                <th style="text-align:right;padding:8px 12px;font-weight:600;">Valor</th>
-              </tr>
-            </thead>
-            <tbody>
+      <!-- Panel detalle: MolOil -->
+      <div id="panel-moloil" style="display:none;border:1px solid var(--gris-medio);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+        <div style="display:grid;grid-template-columns:180px 1fr 260px;">
+          <div style="background:#1a4a6a;padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+            <img src="../assets/logos/MolOil_Negativo.png" alt="MolOil" style="width:120px;" />
+            <div style="text-align:center;">
+              <span style="display:inline-block;background:rgba(255,255,255,0.15);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin:3px 2px;">Petfood</span>
+              <span style="display:inline-block;background:rgba(255,255,255,0.15);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin:3px 2px;">Acuicultura</span>
+            </div>
+          </div>
+          <div style="padding:32px 28px;border-right:1px solid var(--gris-medio);">
+            <h3 style="color:#1a4a6a;margin-bottom:12px;">Aceite fraccionado de <em>Tenebrio molitor</em></h3>
+            <p style="font-size:0.95rem;color:#444;line-height:1.7;">Fracción lipídica de alta densidad energética extraída por prensado en frío. Rico en ácidos grasos insaturados y ácido láurico. Mejora la palatabilidad en piensos de petfood y aumenta la densidad energética en dietas para acuicultura.</p>
+            <p style="font-size:0.9rem;color:#555;margin-top:12px;">Sin necesidad de antibióticos gracias a las propiedades antimicrobianas del ácido láurico (C12:0). Sello <strong>Tenebrio Trazado</strong> con código QR por lote.</p>
+            <div style="margin-top:24px;">
+              <a href="contacto.html?tipo=muestra&producto=moloil" class="btn btn--primary" style="background:#1a4a6a;">Solicitar muestra de MolOil →</a>
+            </div>
+          </div>
+          <div style="padding:32px 24px;">
+            <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#1a4a6a;margin-bottom:16px;">Ficha técnica</div>
+            <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
               <tr style="border-bottom:1px solid var(--gris-claro);">
-                <td style="padding:8px 12px;">Nitrógeno total (N)</td>
-                <td style="padding:8px 12px;text-align:right;font-weight:700;color:var(--naranja-esg);">3–4%</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--gris-claro);background:#fafafa;">
-                <td style="padding:8px 12px;">Fósforo (P₂O₅)</td>
-                <td style="padding:8px 12px;text-align:right;font-weight:700;color:var(--naranja-esg);">2–3%</td>
+                <td style="padding:8px 0;color:#666;">Contenido en grasa</td>
+                <td style="padding:8px 0;text-align:right;font-weight:700;color:#1a4a6a;">&gt;95%</td>
               </tr>
               <tr style="border-bottom:1px solid var(--gris-claro);">
-                <td style="padding:8px 12px;">Potasio (K₂O)</td>
-                <td style="padding:8px 12px;text-align:right;">1–2%</td>
+                <td style="padding:8px 0;color:#666;">Energía bruta</td>
+                <td style="padding:8px 0;text-align:right;font-weight:700;color:#1a4a6a;">~38 MJ/kg</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Humedad</td>
+                <td style="padding:8px 0;text-align:right;">&lt;1%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Ácido láurico (C12:0)</td>
+                <td style="padding:8px 0;text-align:right;">40–50%</td>
               </tr>
               <tr>
-                <td style="padding:8px 12px;">Quitina (biostimulante)</td>
-                <td style="padding:8px 12px;text-align:right;">3–5%</td>
+                <td style="padding:8px 0;color:#666;">Ác. oleico (C18:1)</td>
+                <td style="padding:8px 0;text-align:right;">20–30%</td>
               </tr>
-            </tbody>
-          </table>
-          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
-            <a href="contacto.html" class="btn btn--primary" style="background:var(--naranja-esg);">Solicitar información sobre MolFrass</a>
+            </table>
           </div>
         </div>
-        <div>
-          <img src="../assets/img/acuicultura-peces.jpg"
-               alt="MolFrass — Fertilizante orgánico"
-               style="border-radius:12px;width:100%;height:420px;object-fit:cover;box-shadow:var(--shadow);" />
+      </div>
+
+      <!-- Panel detalle: MolFrass -->
+      <div id="panel-molfrass" style="display:none;border:1px solid var(--gris-medio);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+        <div style="display:grid;grid-template-columns:180px 1fr 260px;">
+          <div style="background:var(--naranja-esg);padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+            <img src="../assets/logos/MolFrass_negativo.png" alt="MolFrass" style="width:120px;" />
+            <div style="text-align:center;">
+              <span style="display:inline-block;background:rgba(255,255,255,0.2);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin:3px 2px;">Agricultura</span>
+              <span style="display:inline-block;background:rgba(255,255,255,0.2);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin:3px 2px;">ESG</span>
+            </div>
+          </div>
+          <div style="padding:32px 28px;border-right:1px solid var(--gris-medio);">
+            <h3 style="color:var(--naranja-esg);margin-bottom:12px;">Fertilizante orgánico de <em>Tenebrio molitor</em></h3>
+            <p style="font-size:0.95rem;color:#444;line-height:1.7;">El frass (excremento de larvas) de GreenCore es rico en nitrógeno, fósforo, potasio y quitina. Certificado como fertilizante orgánico, cierra el ciclo devolviendo nutrientes al campo de las cooperativas cerealistas que suministran el sustrato de cría.</p>
+            <p style="font-size:0.9rem;color:#555;margin-top:12px;">La quitina actúa como biostimulante, activando las defensas naturales de los cultivos. Datos de huella de carbono incluidos por lote para informes CSRD.</p>
+            <div style="margin-top:24px;">
+              <a href="contacto.html?tipo=muestra&producto=molfrass" class="btn btn--primary" style="background:var(--naranja-esg);">Solicitar información sobre MolFrass →</a>
+            </div>
+          </div>
+          <div style="padding:32px 24px;">
+            <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--naranja-esg);margin-bottom:16px;">Ficha técnica</div>
+            <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Nitrógeno total (N)</td>
+                <td style="padding:8px 0;text-align:right;font-weight:700;color:var(--naranja-esg);">3–4%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Fósforo (P₂O₅)</td>
+                <td style="padding:8px 0;text-align:right;font-weight:700;color:var(--naranja-esg);">2–3%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Potasio (K₂O)</td>
+                <td style="padding:8px 0;text-align:right;">1–2%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--gris-claro);">
+                <td style="padding:8px 0;color:#666;">Quitina (biostimulante)</td>
+                <td style="padding:8px 0;text-align:right;">3–5%</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0;color:#666;">Materia orgánica</td>
+                <td style="padding:8px 0;text-align:right;">&gt;60%</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- DIFERENCIAL COMPARTIDO -->
+  <script>
+    function showProduct(id) {
+      ['molpro','moloil','molfrass'].forEach(function(p) {
+        document.getElementById('panel-' + p).style.display = 'none';
+        var btn = document.getElementById('btn-' + p);
+        btn.style.border = '2px solid transparent';
+        btn.style.background = 'var(--gris-claro)';
+      });
+      document.getElementById('panel-' + id).style.display = 'block';
+      var activeBtn = document.getElementById('btn-' + id);
+      var colors = { molpro: ['var(--verde-bosque)','#e8f2ee'], moloil: ['#1a4a6a','#e6edf5'], molfrass: ['var(--naranja-esg)','#fdf0e6'] };
+      activeBtn.style.border = '2px solid ' + colors[id][0];
+      activeBtn.style.background = colors[id][1];
+    }
+  </script>
+
+    <!-- DIFERENCIAL COMPARTIDO -->
   <section class="section section--gray" id="ficha">
     <div class="container">
       <div class="section-header">
