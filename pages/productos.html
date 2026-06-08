@@ -42,23 +42,26 @@
 
       <!-- Selector de productos -->
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;">
-        <button onclick="showProduct('molpro')" id="btn-molpro"
+        <button onclick="showProduct('molpro')" id="btn-molpro" class="product-tab"
           style="border:2px solid var(--verde-bosque);border-radius:var(--radius);padding:20px 16px;background:#e8f2ee;cursor:pointer;text-align:left;transition:all 0.25s;">
           <img src="../assets/logos/MolPro_logo.png" alt="MolPro" style="height:36px;margin-bottom:10px;display:block;" />
           <div style="font-size:0.95rem;font-weight:700;color:var(--verde-bosque);">MolPro</div>
           <div style="font-size:0.82rem;color:#555;margin-top:4px;">Harina proteica · Petfood · Acuicultura</div>
+          <span class="product-tab__hint">Ver ficha técnica ↓</span>
         </button>
-        <button onclick="showProduct('moloil')" id="btn-moloil"
+        <button onclick="showProduct('moloil')" id="btn-moloil" class="product-tab"
           style="border:2px solid transparent;border-radius:var(--radius);padding:20px 16px;background:var(--gris-claro);cursor:pointer;text-align:left;transition:all 0.25s;">
           <img src="../assets/logos/MolOil_logo.png" alt="MolOil" style="height:36px;margin-bottom:10px;display:block;" />
           <div style="font-size:0.95rem;font-weight:700;color:var(--verde-bosque);">MolOil</div>
           <div style="font-size:0.82rem;color:#555;margin-top:4px;">Aceite fraccionado · Energía · Palatabilidad</div>
+          <span class="product-tab__hint">Ver ficha técnica ↓</span>
         </button>
-        <button onclick="showProduct('molfrass')" id="btn-molfrass"
+        <button onclick="showProduct('molfrass')" id="btn-molfrass" class="product-tab"
           style="border:2px solid transparent;border-radius:var(--radius);padding:20px 16px;background:var(--gris-claro);cursor:pointer;text-align:left;transition:all 0.25s;">
           <img src="../assets/logos/MolFrass_logo.png" alt="MolFrass" style="height:36px;margin-bottom:10px;display:block;" />
           <div style="font-size:0.95rem;font-weight:700;color:var(--naranja-esg);">MolFrass</div>
           <div style="font-size:0.82rem;color:#555;margin-top:4px;">Fertilizante orgánico · Circular · Agricultura</div>
+          <span class="product-tab__hint">Ver ficha técnica ↓</span>
         </button>
       </div>
 
